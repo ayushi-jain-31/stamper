@@ -21,6 +21,14 @@ import fitz  # PyMuPDF
 from PIL import Image
 import io
 
+# Isse top right ke saare icons aur buttons gayab ho jayenge
+st.markdown("""
+    <style>
+    header[data-testid="stHeader"] {
+        display: none !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
 
 st.set_page_config(page_title="Papa's Pro Stamper", layout="wide")

@@ -3,6 +3,20 @@ import fitz  # PyMuPDF
 from PIL import Image
 import io
 
+st.set_page_config(page_title="Papa's Pro Stamper", layout="centered")
+
+# Ye niche wala hissa menu aur code hide kar dega
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+        [data-testid="stSidebarNav"] {display: none;}
+        .stDeployButton {display:none;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+
 st.set_page_config(page_title="Papa's Pro Stamper", layout="wide")
 
 st.title("📄 Digital Stamp: Page-by-Page Control")

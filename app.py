@@ -2,6 +2,23 @@ import streamlit as st
 
 import streamlit as st
 
+# --- SABSE UPAR YE CODE ADD KAREIN ---
+import streamlit as st
+
+# Forcefully hamesha ke liye toolbar band karne ka pakka tarika
+st.markdown("""
+<style>
+    /* Sabhi header elements ko disable karo */
+    [data-testid="stHeader"] {display: none !important;}
+    [data-testid="stToolbar"] {visibility: hidden !important; height: 0 !important; display: none !important;}
+    [data-testid="stDecoration"] {display:none;}
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+</style>
+""", unsafe_allow_html=True)
+# ----------------------------------------
+
 # 1. Page configuration (Title aur Layout ke liye)
 st.set_page_config(page_title="Papa's Pro Stamper", layout="centered")
 

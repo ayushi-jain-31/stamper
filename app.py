@@ -1,21 +1,27 @@
 import streamlit as st
+
+import streamlit as st
+
+# 1. Page configuration (Title aur Layout ke liye)
+st.set_page_config(page_title="Papa's Pro Stamper", layout="centered")
+
+# 2. CSS code jo GitHub icon aur menu ko JAD se mita dega
+hide_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    .stDeployButton {display:none;}
+    [data-testid="stToolbar"] {visibility: hidden !important; display: none !important;}
+    [data-testid="stDecoration"] {display:none;}
+    </style>
+    """
+st.markdown(hide_style, unsafe_allow_html=True)
 import fitz  # PyMuPDF
 from PIL import Image
 import io
 
-st.set_page_config(page_title="Papa's Pro Stamper", layout="centered")
 
-# Ye niche wala hissa menu aur code hide kar dega
-hide_menu_style = """
-        <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        header {visibility: hidden;}
-        [data-testid="stSidebarNav"] {display: none;}
-        .stDeployButton {display:none;}
-        </style>
-        """
-st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 st.set_page_config(page_title="Papa's Pro Stamper", layout="wide")
 
